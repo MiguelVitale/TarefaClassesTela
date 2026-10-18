@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classe: Roupa" wrappingWidth="220.13671875" />
+      <Text layoutX="16.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor" wrappingWidth="144.13671875" />
+      <TextField layoutX="14.0" layoutY="108.0" />
+      <Text layoutX="16.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" wrappingWidth="144.13671875" />
+      <TextField layoutX="14.0" layoutY="168.0" />
+      <Text layoutX="16.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material" wrappingWidth="144.13671875" />
+      <TextField layoutX="14.0" layoutY="222.0" />
+      <TextField fx:id="txtf_ID" layoutX="14.0" layoutY="56.0" />
+      <Text layoutX="16.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="144.13671875" />
+      <Button fx:id="bt_Cadastrar" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
+      <Button fx:id="bt_Voltar" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToInicial" text="Voltar" />
+      <TextArea fx:id="txta_TextoPropriedades" layoutX="174.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="bt_Propriedades" layoutX="174.0" layoutY="255.0" mnemonicParsing="false" onAction="#mostraPropriedades" text="Mostrar propriedades" />
+      <TextArea layoutX="382.0" layoutY="50.0" prefHeight="0.0" prefWidth="149.0" />
+      <TextArea layoutX="382.0" layoutY="121.0" prefHeight="0.0" prefWidth="149.0" />
+      <TextArea layoutX="382.0" layoutY="194.0" prefHeight="0.0" prefWidth="149.0" />
+      <Button layoutX="382.0" layoutY="92.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="382.0" layoutY="163.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="382.0" layoutY="238.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
