@@ -12,6 +12,6 @@ public class InicialController {
 
     @FXML
     void switchToRoupa (ActionEvent event) throws IOException {
-
+        App.setRoot("roupa");
     }
 }
