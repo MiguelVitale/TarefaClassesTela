@@ -17,6 +17,8 @@ public class InicialController {
     private Button bt_Arvore;
     @FXML
     private Button bt_Pessoa;
+    @FXML
+    private Button bt_Bicicleta;
 
     @FXML
     void switchToRoupa (ActionEvent event) throws IOException {
@@ -41,5 +43,10 @@ public class InicialController {
     @FXML
     void switchToPessoa (ActionEvent event) throws IOException {
         App.setRoot("pessoa");
+    }
+
+    @FXML
+    void switchToBicicleta (ActionEvent event) throws IOException{
+        App.setRoot("bicicleta");
     }
 }
