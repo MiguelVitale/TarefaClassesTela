@@ -29,6 +29,8 @@ public class InicialController {
     private Button bt_Papel;
     @FXML
     private Button bt_Desenho;
+    @FXML
+    private Button bt_Lapis;
 
     @FXML
     void switchToRoupa (ActionEvent event) throws IOException {
@@ -83,5 +85,10 @@ public class InicialController {
     @FXML
     void switchToDesenho (ActionEvent event) throws IOException{
         App.setRoot("desenho");
+    }
+
+    @FXML
+    void switchToLapis (ActionEvent event) throws IOException{
+        App.setRoot("lapis");
     }
 }

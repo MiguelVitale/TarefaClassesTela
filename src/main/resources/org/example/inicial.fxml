@@ -23,5 +23,6 @@
       <Button fx:id="bt_Mascara" layoutX="21.0" layoutY="356.0" mnemonicParsing="false" onAction="#switchToMascara" text="Mascara" />
       <Button fx:id="bt_Papel" layoutX="138.0" layoutY="64.0" mnemonicParsing="false" onAction="#switchToPapel" text="Papel" />
       <Button fx:id="bt_Desenho" layoutX="138.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToDesenho" text="Desenho" />
+      <Button fx:id="bt_Lapis" layoutX="139.0" layoutY="133.0" mnemonicParsing="false" onAction="#switchToLapis" text="Lapis" />
    </children>
 </AnchorPane>
