@@ -13,6 +13,7 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Button fx:id="bt_Estante" layoutX="23.0" layoutY="107.0" mnemonicParsing="false" onAction="#switchToEstante" text="Estante" />
+      <Button fx:id="bt_Estante" layoutX="21.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToEstante" text="Estante" />
+      <Button fx:id="bt_Manequim" layoutX="21.0" layoutY="133.0" mnemonicParsing="false" onAction="#switchToManequim" text="Manequim" />
    </children>
 </AnchorPane>

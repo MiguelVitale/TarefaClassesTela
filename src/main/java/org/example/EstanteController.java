@@ -18,6 +18,7 @@ public class EstanteController {
     private Button bt_Cadastrar;
     @FXML
     private Button bt_Propriedades;
+
     //botões de métodos
     @FXML
     private Button bt_Guardar;
@@ -25,6 +26,7 @@ public class EstanteController {
     private Button bt_Retirar;
     @FXML
     private Button bt_Organizar;
+
     //text fields
     @FXML
     private TextField txtf_ID;
