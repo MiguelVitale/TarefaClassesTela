@@ -21,6 +21,8 @@ public class InicialController {
     private Button bt_Bicicleta;
     @FXML
     private Button bt_Parede;
+    @FXML
+    private Button bt_Escultura;
 
     @FXML
     void switchToRoupa (ActionEvent event) throws IOException {
@@ -55,5 +57,10 @@ public class InicialController {
     @FXML
     void switchToParede (ActionEvent event) throws IOException{
         App.setRoot("parede");
+    }
+
+    @FXML
+    void switchToEscultura (ActionEvent event) throws IOException{
+        App.setRoot("escultura");
     }
 }
