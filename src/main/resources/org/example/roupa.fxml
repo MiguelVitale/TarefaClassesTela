@@ -22,7 +22,7 @@
       <TextArea fx:id="txta_TextoPropriedades" layoutX="174.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
       <Button fx:id="bt_Propriedades" layoutX="174.0" layoutY="255.0" mnemonicParsing="false" onAction="#mostraPropriedades" text="Mostrar propriedades" />
       <Button fx:id="bt_Vestir" layoutX="382.0" layoutY="255.0" mnemonicParsing="false" onAction="#vestir" text="Vestir" />
-      <TextArea fx:id="txta_Ações" layoutX="382.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="txta_Acoes" layoutX="382.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
       <Button fx:id="bt_Retirar" layoutX="456.0" layoutY="255.0" mnemonicParsing="false" onAction="#retirar" text="Retirar" />
       <Button fx:id="bt_Lavar" layoutX="530.0" layoutY="255.0" mnemonicParsing="false" onAction="#lavar" text="Lavar" />
    </children>

@@ -17,6 +17,8 @@ public class Roupa {
     }
 
     //metodo de acesso get
+    public String getID() { return ID;}
+
     public String getCor(){
         return Cor;
     }
@@ -30,18 +32,18 @@ public class Roupa {
     }
 
     //veste a roupa
-    public void Vestir(){
-        System.out.println("Voce vestiu a roupa");
+    public String Vestir(){
+         return "Voce vestiu a roupa";
     }
 
     //retira a roupa
-    public void Retirar(){
-        System.out.println("Voce retirou a roupa");
+    public String Retirar(){
+        return "Voce retirou a roupa";
     }
 
     //lava a roupa
-    public void Lavar(){
-        System.out.println("Voce lavou a roupa");
+    public String Lavar(){
+        return "Voce lavou a roupa";
     }
 
 }

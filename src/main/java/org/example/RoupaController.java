@@ -37,34 +37,81 @@ public class RoupaController {
     @FXML
     private TextArea txta_TextoPropriedades;
     @FXML
-    private TextArea txta_Ações;
+    private TextArea txta_Acoes;
 
 
     ArrayList<Roupa> roupas = new ArrayList<Roupa>();
 
     @FXML
     void cadastrar (ActionEvent event){
-
+        Roupa r = new Roupa(txtf_ID.getText(), txtf_Cor.getText(), txtf_Marca.getText(), txtf_Material.getText());
+        roupas.add(r);
+        txtf_ID.clear();
+        txtf_Cor.clear();
+        txtf_Marca.clear();
+        txtf_Material.clear();
     }
 
     @FXML
     void mostraPropriedades (ActionEvent event){
+        txta_TextoPropriedades.clear();
 
+        Roupa r2;
+
+        for(int i=0; i< roupas.size(); i++){
+            r2=roupas.get(i);
+            if(r2.getID().equals(txtf_ID.getText())) {
+                txta_TextoPropriedades.appendText("Cor: " + r2.getCor() + "\n");
+                txta_TextoPropriedades.appendText("Marca: " + r2.getMarca() + "\n");
+                txta_TextoPropriedades.appendText("Material: " + r2.getMaterial() + "\n");
+            }
+        }
+        txtf_ID.clear();
     }
 
     @FXML
     void vestir (ActionEvent event){
+        txta_Acoes.clear();
 
+        Roupa r2;
+
+        for(int i=0; i< roupas.size(); i++){
+            r2=roupas.get(i);
+            if(r2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(r2.Vestir() + " " + r2.getID());
+            }
+        }
+        txtf_ID.clear();
     }
 
     @FXML
     void retirar (ActionEvent event){
+        txta_Acoes.clear();
 
+        Roupa r2;
+
+        for(int i=0; i< roupas.size(); i++){
+            r2=roupas.get(i);
+            if(r2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(r2.Retirar() + " " + r2.getID());
+            }
+        }
+        txtf_ID.clear();
     }
 
     @FXML
     void lavar (ActionEvent event){
+        txta_Acoes.clear();
 
+        Roupa r2;
+
+        for(int i=0; i< roupas.size(); i++){
+            r2=roupas.get(i);
+            if(r2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(r2.Lavar() + " " + r2.getID());
+            }
+        }
+        txtf_ID.clear();
     }
 
     @FXML
