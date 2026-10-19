@@ -21,66 +21,98 @@ public class ManequimController {
 
     //botões de métodos
     @FXML
-    private Button bt_Guardar;
+    private Button bt_Vestir;
+    @FXML
+    private Button bt_Desvestir;
+    @FXML
+    private Button bt_Exibir;
     @FXML
     private Button bt_Retirar;
-    @FXML
-    private Button bt_Organizar;
 
     //text fields
     @FXML
     private TextField txtf_ID;
     @FXML
-    private TextField txtf_Tamanho;
+    private TextField txtf_Pose;
     @FXML
-    private TextField txtf_QntEspacos;
+    private TextField txtf_Altura;
     @FXML
-    private TextField txtf_Material;
+    private TextField txtf_Sexo;
     //text areas
     @FXML
     private TextArea txta_TextoPropriedades;
     @FXML
     private TextArea txta_Acoes;
 
-    ArrayList<Estante> estantes = new ArrayList<Estante>();
+    ArrayList<Manequim> manequims = new ArrayList<Manequim>();
 
     @FXML
     void cadastrar (ActionEvent event){
-        Estante e = new Estante(txtf_ID.getText(), Integer.parseInt(txtf_QntEspacos.getText()), Float.parseFloat(txtf_Tamanho.getText()), txtf_Material.getText());
-        estantes.add(e);
+        Manequim m = new Manequim(txtf_ID.getText(), txtf_Pose.getText(), Integer.parseInt(txtf_Altura.getText()), txtf_Sexo.getText());
+        manequims.add(m);
         txtf_ID.clear();
-        txtf_Tamanho.clear();
-        txtf_QntEspacos.clear();
-        txtf_Material.clear();
+        txtf_Pose.clear();
+        txtf_Altura.clear();
+        txtf_Sexo.clear();
     }
 
     @FXML
     void mostraPropriedades (ActionEvent event){
         txta_TextoPropriedades.clear();
 
-        Estante e2;
+        Manequim m2;
 
-        for(int i=0; i< estantes.size(); i++){
-            e2=estantes.get(i);
-            if(e2.getID().equals(txtf_ID.getText())) {
-                txta_TextoPropriedades.appendText("Tamanho: " + e2.getTamanho() + "M^2 \n");
-                txta_TextoPropriedades.appendText("Quantidade de espaços: " + e2.getQntEspaco() + "\n");
-                txta_TextoPropriedades.appendText("Material: " + e2.getMaterial() + "\n");
+        for(int i=0; i< manequims.size(); i++){
+            m2=manequims.get(i);
+            if(m2.getID().equals(txtf_ID.getText())) {
+                txta_TextoPropriedades.appendText("Pose: " + m2.getPose() + "\n");
+                txta_TextoPropriedades.appendText("Altura: " + m2.getAltura() + "cm \n");
+                txta_TextoPropriedades.appendText("Sexo: " + m2.getSexo() + "\n");
             }
         }
         txtf_ID.clear();
     }
 
     @FXML
-    void guardar (ActionEvent event){
+    void vestir (ActionEvent event){
         txta_Acoes.clear();
 
-        Estante e2;
+        Manequim m2;
 
-        for(int i=0; i< estantes.size(); i++){
-            e2=estantes.get(i);
-            if(e2.getID().equals(txtf_ID.getText())) {
-                txta_Acoes.appendText(e2.Guardar() + " " + e2.getID());
+        for(int i=0; i< manequims.size(); i++){
+            m2=manequims.get(i);
+            if(m2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(m2.ColocarR() + " " + m2.getID());
+            }
+        }
+        txtf_ID.clear();
+    }
+
+    @FXML
+    void desvestir (ActionEvent event){
+        txta_Acoes.clear();
+
+        Manequim m2;
+
+        for(int i=0; i< manequims.size(); i++){
+            m2=manequims.get(i);
+            if(m2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(m2.Desvestir() + " " + m2.getID());
+            }
+        }
+        txtf_ID.clear();
+    }
+
+    @FXML
+    void exibir (ActionEvent event){
+        txta_Acoes.clear();
+
+        Manequim m2;
+
+        for(int i=0; i< manequims.size(); i++){
+            m2=manequims.get(i);
+            if(m2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(m2.Exibir() + " " + m2.getID());
             }
         }
         txtf_ID.clear();
@@ -90,27 +122,12 @@ public class ManequimController {
     void retirar (ActionEvent event){
         txta_Acoes.clear();
 
-        Estante e2;
+        Manequim m2;
 
-        for(int i=0; i< estantes.size(); i++){
-            e2=estantes.get(i);
-            if(e2.getID().equals(txtf_ID.getText())) {
-                txta_Acoes.appendText(e2.RetirarE() + " " + e2.getID());
-            }
-        }
-        txtf_ID.clear();
-    }
-
-    @FXML
-    void organizar (ActionEvent event){
-        txta_Acoes.clear();
-
-        Estante e2;
-
-        for(int i=0; i< estantes.size(); i++){
-            e2=estantes.get(i);
-            if(e2.getID().equals(txtf_ID.getText())) {
-                txta_Acoes.appendText(e2.Organizar() + " " + e2.getID());
+        for(int i=0; i< manequims.size(); i++){
+            m2=manequims.get(i);
+            if(m2.getID().equals(txtf_ID.getText())) {
+                txta_Acoes.appendText(m2.TirarMan() + " " + m2.getID());
             }
         }
         txtf_ID.clear();

@@ -17,6 +17,8 @@ public class Manequim {
     }
 
     //metodo de acesso get
+    public String getID() { return ID; }
+
     public String getPose(){
         return Pose;
     }
