@@ -16,5 +16,6 @@
       <Button fx:id="bt_Estante" layoutX="21.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToEstante" text="Estante" />
       <Button fx:id="bt_Manequim" layoutX="21.0" layoutY="133.0" mnemonicParsing="false" onAction="#switchToManequim" text="Manequim" />
       <Button fx:id="bt_Arvore" layoutX="22.0" layoutY="170.0" mnemonicParsing="false" onAction="#switchToArvore" text="Árvore" />
+      <Button fx:id="bt_Pessoa" layoutX="23.0" layoutY="207.0" mnemonicParsing="false" onAction="#switchToPessoa" text="Pessoa" />
    </children>
 </AnchorPane>
